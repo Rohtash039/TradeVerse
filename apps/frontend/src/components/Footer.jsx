@@ -1,4 +1,5 @@
-import { Activity, Twitter, Linkedin, Github } from "lucide-react";
+import { Activity } from "lucide-react";
+import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import "./Footer.css"
 import { useFlash } from "../context/FlashContext";
@@ -38,9 +39,9 @@ export default function Footer(){
 
                 <div className="icons-div">
 
-                  <div className="footer-icons"><Twitter size={18} color="white"/></div>
-                  <div className="footer-icons"><Linkedin size={18} color="white"/></div>
-                  <div className="footer-icons"><Github size={18} color="white"/></div>
+                  <div className="footer-icons"><FaXTwitter size={18} color="white"/></div>
+                  <div className="footer-icons"><FaLinkedin size={18} color="white"/></div>
+                  <div className="footer-icons"><FaGithub size={18} color="white"/></div>
 
                 </div>
 

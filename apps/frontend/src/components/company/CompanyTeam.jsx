@@ -1,5 +1,5 @@
 import "./CompanyTeam.css"
-import {Linkedin, Twitter} from "lucide-react"
+import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 export default function CompanyTeam(){
     const team = [
         {
@@ -60,12 +60,12 @@ export default function CompanyTeam(){
                         <div className="team-card-socials">
                         {m.socials.includes('linkedin') && (
                             <span className="team-social-icon">
-                            <Linkedin size={15} color="var(--text-muted)" />
+                            <FaLinkedin size={15} color="var(--text-muted)" />
                             </span>
                         )}
                         {m.socials.includes('twitter') && (
                             <span className="team-social-icon">
-                            <Twitter size={15} color="var(--text-muted)" />
+                            <FaXTwitter size={15} color="var(--text-muted)" />
                             </span>
                         )}
                         </div>
