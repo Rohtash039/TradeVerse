@@ -61,7 +61,7 @@ export default function Login() {
       showFlash("Login Successful", "success");
 
       setTimeout(() => {
-        window.location.href = "http://localhost:5174";
+        window.location.href =  import.meta.env.VITE_DASHBOARD_URL || "http://localhost:5174";
       }, 1500);
     } catch (error) {
       showFlash(error.message, "error");
@@ -76,7 +76,7 @@ export default function Login() {
       showFlash("Login Successful", "success");
 
       setTimeout(() => {
-        window.location.href = "http://localhost:5174";
+        window.location.href = import.meta.env.VITE_DASHBOARD_URL || "http://localhost:5174";
       }, 1500);
     } catch (error) {
       showFlash(error.message, "error");

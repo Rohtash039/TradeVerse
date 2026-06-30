@@ -9,6 +9,7 @@ export default function ProtectedRoute() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
+    console.log("FRONTEND URL =", import.meta.env.VITE_FRONTEND_URL);
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (firebaseUser) {
         setUser(firebaseUser);
