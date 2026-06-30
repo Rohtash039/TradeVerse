@@ -1,0 +1,136 @@
+/* ========================================================
+   Trending Topics — Hot Topics Tag Cloud
+   ======================================================== */
+
+.trending-topics {
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.2s ease-out 100ms both;
+}
+
+/* ── Header ── */
+.trending-topics__header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trending-topics__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trending-topics__title svg {
+  color: #f97316;
+}
+
+.trending-topics__subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+  padding-left: 24px;
+}
+
+/* ── Tag Cloud ── */
+.trending-topics__cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ── Individual Tags ── */
+.trending-topics__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  animation: fadeIn 0.2s ease-out both;
+}
+
+.trending-topics__tag:hover {
+  transform: translateY(-1px);
+}
+
+/* Heat levels */
+.trending-topics__tag--hot {
+  background: rgba(249, 115, 22, 0.12);
+  color: #fb923c;
+  border-color: rgba(249, 115, 22, 0.25);
+}
+
+.trending-topics__tag--hot:hover {
+  background: rgba(249, 115, 22, 0.2);
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.2);
+}
+
+.trending-topics__tag--hot .trending-topics__tag-icon {
+  color: #f97316;
+}
+
+.trending-topics__tag--warm {
+  background: rgba(234, 179, 8, 0.1);
+  color: #facc15;
+  border-color: rgba(234, 179, 8, 0.2);
+}
+
+.trending-topics__tag--warm:hover {
+  background: rgba(234, 179, 8, 0.18);
+  box-shadow: 0 0 12px rgba(234, 179, 8, 0.15);
+}
+
+.trending-topics__tag--warm .trending-topics__tag-icon {
+  color: #eab308;
+}
+
+.trending-topics__tag--mild {
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.trending-topics__tag--mild:hover {
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.trending-topics__tag--mild .trending-topics__tag-icon {
+  color: var(--accent-blue);
+}
+
+.trending-topics__tag--cool {
+  background: var(--surface-hover);
+  color: var(--text-secondary);
+  border-color: var(--border-subtle);
+}
+
+.trending-topics__tag--cool:hover {
+  background: var(--surface-overlay);
+}
+
+.trending-topics__tag--cool .trending-topics__tag-icon {
+  color: var(--text-muted);
+}
+
+/* ── Tag Parts ── */
+.trending-topics__tag-name {
+  white-space: nowrap;
+}
+
+.trending-topics__tag-count {
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.7;
+}

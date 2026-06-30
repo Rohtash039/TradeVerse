@@ -1,0 +1,16 @@
+/* ========================================================
+   MarketsPage — Page-level container & layout
+   ======================================================== */
+
+.markets-page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+  margin-top: 68px;
+  margin-left: 78px;
+  padding-right: 16px;
+  overflow-y: auto;
+  animation: fadeIn var(--duration-slow) var(--ease-out);
+}

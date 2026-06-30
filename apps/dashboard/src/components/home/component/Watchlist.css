@@ -1,0 +1,224 @@
+
+.watchlist{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 14px;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    background-color: var(--glass-card);
+    min-height: 0;
+}
+
+.watchlist-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 8px;
+    border-bottom: 1px solid var(--border-subtle);
+    flex-shrink: 0;
+}
+
+.watchlist-title{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.watchlist-count{
+    font-size: 11px;
+    color: var(--text-muted);
+    background-color: var(--surface-overlay);
+    padding: 2px 8px;
+    border-radius: 100px
+}
+
+
+.watchlist-table-header{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 0.9fr;
+    padding: 8px 8px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-subtle);
+    flex-shrink: 0;
+}
+
+.watchlist-table-header span:last-child {
+  text-align: right;
+}
+
+.watchlist-table-header span:nth-child(2) {
+  text-align: right;
+}
+
+
+.watchlist-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* ── Row ── */
+.watchlist-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.9fr;
+  align-items: center;
+  padding: 8px 8px;
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.watchlist-row:hover {
+  background: var(--glass-card-hover);
+}
+
+.watchlist-row-active {
+  background: rgba(var(--primary-neon-rgb), 0.04);
+  border-left: 2px solid var(--primary-neon);
+}
+
+/* Flash animations */
+.watchlist-row-flash-green {
+  animation: flash-green 600ms ease-out;
+}
+
+.watchlist-row-flash-red {
+  animation: flash-red 600ms ease-out;
+}
+
+@keyframes flash-red {
+  0% { background-color: rgba(255, 0, 0, 0.35); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flash-green {
+  0% { background-color: rgba(0, 255, 140, 0.35); }
+  100% { background-color: transparent; }
+}
+
+/* ── Asset info ── */
+.watchlist-asset {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.watchlist-asset-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.watchlist-asset-icon-btc {
+  background: rgba(247, 147, 26, 0.15);
+  color: #f7931a;
+}
+
+.watchlist-asset-icon-eth {
+  background: rgba(98, 126, 234, 0.15);
+  color: #627eea;
+}
+
+.watchlist-asset-icon-sol {
+  background: rgba(0, 255, 163, 0.15);
+  color: #00ffa3;
+}
+
+.watchlist-asset-icon-nvda {
+  background: rgba(118, 185, 0, 0.15);
+  color: #76b900;
+}
+
+.watchlist-asset-icon-tsla {
+  background: rgba(204, 0, 0, 0.15);
+  color: #cc0000;
+}
+
+.watchlist-asset-icon-doge {
+  background: rgba(196, 166, 72, 0.15);
+  color: #c4a648;
+}
+
+.watchlist-asset-icon-aapl {
+  background: rgba(168, 168, 168, 0.15);
+  color: #a8a8a8;
+}
+
+.watchlist-asset-icon-xrp {
+  background: rgba(0, 170, 228, 0.15);
+  color: #00aae4;
+}
+
+.watchlist-asset-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.watchlist-asset-symbol {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.watchlist-asset-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ── Price ── */
+.watchlist-price {
+  text-align: right;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ── Change ── */
+.watchlist-change {
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  padding-left: 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  justify-content: flex-end;
+  width: fit-content;
+  margin-left: 32px;
+}
+
+.watchlist-change-up {
+  color: var(--success);
+  background: var(--success-bg);
+}
+
+.watchlist-change-down {
+  color: var(--danger);
+  background: var(--danger-bg);
+}
+
+
+.watchlist-coin-image {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.watchlist-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-muted);
+  font-size: 14px;
+}

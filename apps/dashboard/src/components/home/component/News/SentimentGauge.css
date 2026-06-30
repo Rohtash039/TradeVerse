@@ -1,0 +1,132 @@
+/* ========================================================
+   Sentiment Gauge — Fear & Greed Ring
+   ======================================================== */
+
+.sentiment-gauge {
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.2s ease-out both;
+}
+
+/* ── Header ── */
+.sentiment-gauge__header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sentiment-gauge__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sentiment-gauge__title svg {
+  color: var(--accent-purple);
+}
+
+.sentiment-gauge__subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+  padding-left: 24px;
+}
+
+/* ── Ring SVG ── */
+.sentiment-gauge__ring-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.sentiment-gauge__svg {
+  width: 180px;
+  height: 108px;
+}
+
+.sentiment-gauge__track {
+  stroke: var(--surface-hover);
+}
+
+.sentiment-gauge__progress {
+  transition: stroke-dashoffset 1.2s var(--ease-out);
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+/* ── Center Value ── */
+.sentiment-gauge__value-container {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.sentiment-gauge__score {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.sentiment-gauge__label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ── Stats Footer ── */
+.sentiment-gauge__stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sentiment-gauge__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.sentiment-gauge__stat-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sentiment-gauge__stat-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sentiment-gauge__stat-value--positive {
+  color: var(--success);
+}
+
+.sentiment-gauge__stat-value--negative {
+  color: var(--danger);
+}
+
+.sentiment-gauge__stat-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--border-subtle);
+}

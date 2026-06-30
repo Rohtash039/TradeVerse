@@ -1,0 +1,89 @@
+
+.feature-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-card-head{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.feature-card-para{
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 400px;
+    color: var(--text-muted);
+    margin-bottom: 60px;
+}
+
+.feature-card-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 60px;
+}
+
+.feature-card-item{
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 32px;
+    position: relative;
+    transition: all 0.3s ease;
+    margin-bottom: 16px;
+}
+
+.feature-card-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-neon), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(0, 255, 170, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card-item:hover::before {
+  opacity: 1;
+}
+
+.feature-card-icon{
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 170, 0.1);
+    border-radius: 12px;
+    color: var(--primary-neon);
+    margin-bottom: 24px;
+}
+
+.feature-card-heads{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.feature-card-paras{
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}

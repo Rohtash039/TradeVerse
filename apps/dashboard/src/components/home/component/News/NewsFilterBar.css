@@ -1,0 +1,118 @@
+
+/* ========================================================
+   News Filter Bar — Tabs & Breaking Toggle
+   ======================================================== */
+
+.news-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+}
+
+/* ── Tabs ── */
+.news-filter-bar__tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.news-filter-bar__tab {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all 0.2s ease-out;
+  white-space: nowrap;
+}
+
+.news-filter-bar__tab:hover {
+  color: var(--text-secondary);
+  background: var(--surface-hover);
+}
+
+.news-filter-bar__tab--active {
+  color: var(--text-primary);
+  background: var(--surface-overlay);
+  box-shadow: 0 0 0 1px var(--border-default);
+}
+
+/* ── Toggle Group ── */
+.news-filter-bar__toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.news-filter-bar__toggle-icon {
+  color: var(--warning);
+}
+
+.news-filter-bar__toggle-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* ── Custom Toggle Switch ── */
+.news-filter-bar__toggle {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border-radius: 12px;
+  background: var(--surface-hover);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  flex-shrink: 0;
+}
+
+.news-filter-bar__toggle--active {
+  background: rgba(var(--success-rgb), 0.2);
+  border-color: var(--success);
+}
+
+.news-filter-bar__toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  transition: all 0.2s ease-out;
+}
+
+.news-filter-bar__toggle--active .news-filter-bar__toggle-knob {
+  left: 18px;
+  background: var(--success);
+  box-shadow: 0 0 8px rgba(var(--success-rgb), 0.4);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .news-filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-filter-bar__tabs {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .news-filter-bar__tabs::-webkit-scrollbar {
+    display: none;
+  }
+}

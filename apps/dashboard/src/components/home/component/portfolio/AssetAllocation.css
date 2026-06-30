@@ -1,0 +1,110 @@
+.asset-allocation{
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.asset-allocation-title{
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.3px;
+}
+
+/* ── Chart Container ── */
+.asset-allocation-chart-wrap{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Center Label (overlaid on donut hole) ── */
+.asset-allocation-center-label{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  pointer-events: none;
+}
+
+.asset-allocation-center-amount{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.asset-allocation-center-text{
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── Legend ── */
+.asset-allocation-legend{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.asset-allocation-legend-item{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.asset-allocation-legend-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.asset-allocation-legend-name{
+  flex: 1;
+  color: var(--text-secondary);
+}
+
+.asset-allocation-legend-pct{
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ── Tooltip ── */
+.allocation-tooltip{
+  background: var(--surface-overlay);
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: var(--shadow-elevated);
+}
+
+.allocation-tooltip-name{
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.allocation-tooltip-value{
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-neon);
+}
+
+.allocation-tooltip-pct{
+  font-size: 11px;
+  color: var(--text-muted);
+}

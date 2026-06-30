@@ -1,0 +1,114 @@
+.flash-container {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 90%;
+  max-width: 650px;
+  pointer-events: none;
+}
+
+.flash-message {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  animation: flash-slide-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  position: relative;
+}
+
+.flash-text {
+  flex-grow: 1;
+  padding-right: 28px;
+}
+
+.flash-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.2s, transform 0.2s;
+  opacity: 0.6;
+}
+
+.flash-close:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Success styling */
+.flash-success {
+  background-color: #f3faf5;
+  border: 1px solid #d1ebd9;
+  color: #1e4620;
+}
+
+.flash-success .flash-close {
+  color: #1e4620;
+}
+
+/* Error styling */
+.flash-error {
+  background-color: #fde8e8;
+  border: 1px solid #f8b4b4;
+  color: #7a1c1c;
+}
+
+.flash-error .flash-close {
+  color: #7a1c1c;
+}
+
+/* Info styling */
+.flash-info {
+  background-color: #f0f7ff;
+  border: 1px solid #c2e0ff;
+  color: #004085;
+}
+
+.flash-info .flash-close {
+  color: #004085;
+}
+
+/* Warning styling */
+.flash-warning {
+  background-color: #fffbeb;
+  border: 1px solid #fef3c7;
+  color: #92400e;
+}
+
+.flash-warning .flash-close {
+  color: #92400e;
+}
+
+@keyframes flash-slide-in {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

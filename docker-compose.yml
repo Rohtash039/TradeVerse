@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:7.0
+    container_name: tradeverse-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: tradeverse-api
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./apps/frontend
+    container_name: tradeverse-landing
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  dashboard:
+    build: ./apps/dashboard
+    container_name: tradeverse-app
+    ports:
+      - "3001:80"
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:

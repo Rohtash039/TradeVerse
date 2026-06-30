@@ -1,0 +1,301 @@
+/* ========================================================
+   MarketTable — Asset data table with scrollable body
+   ======================================================== */
+
+/* ── Table Container ── */
+.market-table-wrapper {
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.market-table-scroll {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 560px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-hover) transparent;
+}
+
+.market-table-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.market-table-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.market-table-scroll::-webkit-scrollbar-thumb {
+  background: var(--surface-hover);
+  border-radius: 3px;
+}
+
+/* ── Table ── */
+.market-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+}
+
+.market-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.market-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  background: var(--surface-raised);
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease-out;
+}
+
+.market-table th:hover {
+  color: var(--text-secondary);
+}
+
+.market-table th:first-child {
+  padding-left: 20px;
+}
+
+.market-table th:last-child {
+  padding-right: 20px;
+  text-align: right;
+}
+
+/* Align numeric columns right */
+.market-table th.th-right {
+  text-align: right;
+}
+
+.market-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  transition: background 0.2s ease-out;
+  vertical-align: middle;
+}
+
+.market-table td:first-child {
+  padding-left: 20px;
+}
+
+.market-table td:last-child {
+  padding-right: 20px;
+  text-align: right;
+}
+
+.market-table tbody tr {
+  transition: background 0.2s ease-out;
+  cursor: pointer;
+}
+
+.market-table tbody tr:hover td {
+  background: var(--glass-card-hover);
+}
+
+.market-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Asset Cell ── */
+.market-table__asset-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 200px;
+}
+
+.market-table__asset-rank {
+  font-size: 12px;
+  color: var(--text-disabled);
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.market-table__asset-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.market-table__asset-names {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.market-table__asset-symbol {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+.market-table__asset-name {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Price & Numeric Cells ── */
+.market-table__price {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.market-table__volume,
+.market-table__mcap {
+  color: var(--text-secondary);
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* ── Change Badge ── */
+.market-table__change {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.market-table__change--up {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.market-table__change--down {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+/* ── Favorite Star ── */
+.market-table__fav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-disabled);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+
+.market-table__fav-btn:hover {
+  color: var(--accent-amber);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.market-table__fav-btn--active {
+  color: var(--accent-amber);
+}
+
+/* ── Trade CTA Button ── */
+.market-table__trade-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  color: var(--accent-blue);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  white-space: nowrap;
+}
+
+.market-table__trade-btn:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.15);
+  transform: translateY(-1px);
+}
+
+/* ── Table Footer ── */
+.market-table__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--surface-raised);
+}
+
+.market-table__info {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.market-table__info span {
+  color: var(--text-secondary);
+}
+
+.market-table__live-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--success);
+  font-weight: 500;
+}
+
+.market-table__live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  animation: pulse-live 2s infinite;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .market-table th,
+  .market-table td {
+    padding: 10px 12px;
+  }
+
+  .market-table th:first-child,
+  .market-table td:first-child {
+    padding-left: 14px;
+  }
+
+  .market-table__asset-cell {
+    min-width: 160px;
+  }
+
+  .market-table__asset-rank {
+    display: none;
+  }
+}

@@ -1,0 +1,57 @@
+.trust-heading{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 64px;
+    margin-top: -100px;
+}
+
+.trust-template{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.card-trust{
+    padding: 32px;
+    text-align: left;
+}
+
+.card-star{
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.card-content{
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+
+
+.card-owner{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-owner-design{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #0ea5e9, #8b5cf6);
+}
+
+
+.card-owner-heading{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.card-owner-para{
+    font-size: 12px;
+    color: var(--text-muted);
+}

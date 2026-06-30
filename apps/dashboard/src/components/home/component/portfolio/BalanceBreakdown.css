@@ -1,0 +1,126 @@
+
+.balance-breakdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  gap: 12px;
+  margin-right: 14px;
+}
+
+
+.balance-card{
+  position: relative;
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.balance-card:hover{
+  border-color: var(--glass-border-hover);
+  background: var(--glass-card-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+
+.balance-card-accent-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 18px 18px 0 0;
+}
+
+.balance-card-neon .balance-card-accent-bar{
+  background: linear-gradient(90deg, var(--primary-neon), transparent);
+}
+
+.balance-card-blue .balance-card-accent-bar{
+  background: linear-gradient(90deg, var(--accent-blue), transparent);
+}
+
+.balance-card-amber .balance-card-accent-bar{
+  background: linear-gradient(90deg, var(--accent-amber), transparent);
+}
+
+.balance-card-success .balance-card-accent-bar{
+  background: linear-gradient(90deg, var(--success), transparent);
+}
+
+
+.balance-card-icon-wrap{
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.balance-card-neon .balance-card-icon-wrap{
+  background: rgba(var(--primary-neon-rgb), 0.1);
+  color: var(--primary-neon);
+}
+
+
+.balance-card-blue .balance-card-icon-wrap{
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent-blue);
+}
+
+.balance-card-amber .balance-card-icon-wrap{
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent-amber);
+}
+
+.balance-card-success .balance-card-icon-wrap{
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+
+.balance-card-label{
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.balance-card-value{
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.balance-card-subtext{
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+
+@media (max-width: 1200px){
+  .balance-breakdown{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px){
+  .balance-breakdown{
+    grid-template-columns: 1fr;
+  }
+
+  .balance-card-value{
+    font-size: 20px;
+  }
+} 

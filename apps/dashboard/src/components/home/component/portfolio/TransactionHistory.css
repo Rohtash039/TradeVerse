@@ -1,0 +1,188 @@
+/* ========================================================
+   Transaction History — Recent Transactions List
+   ======================================================== */
+
+.txn-history {
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Header ── */
+.txn-history__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.txn-history__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.txn-history__view-all {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--primary-neon);
+  cursor: pointer;
+  transition: opacity 0.2s ease-out;
+}
+
+.txn-history__view-all:hover {
+  opacity: 0.8;
+}
+
+/* ── List ── */
+.txn-history__list {
+  display: flex;
+  flex-direction: column;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+/* ── Row ── */
+.txn-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background o.2s ease-out;
+  gap: 12px;
+}
+
+.txn-row:last-child {
+  border-bottom: none;
+}
+
+.txn-row:hover {
+  background: var(--glass-card-hover);
+  border-radius: 8px;
+}
+
+/* ── Row Left (Icon + Type + Date) ── */
+.txn-row__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.txn-row__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.txn-type--buy .txn-row__icon,
+.txn-type--buy {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.txn-type--sell .txn-row__icon,
+.txn-type--sell {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.txn-type--deposit .txn-row__icon,
+.txn-type--deposit {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent-blue);
+}
+
+.txn-type--withdraw .txn-row__icon,
+.txn-type--withdraw {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent-amber);
+}
+
+.txn-row__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.txn-row__type {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.txn-row__date {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ── Row Center (Asset + Amount) ── */
+.txn-row__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.txn-row__asset {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.txn-row__amount {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ── Row Right (Value + Status) ── */
+.txn-row__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex: 1;
+}
+
+.txn-row__value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.txn-row__status {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+
+.txn-status--completed {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.txn-status--pending {
+  background: var(--warning-bg);
+  color: var(--warning);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .txn-row__center {
+    display: none;
+  }
+}

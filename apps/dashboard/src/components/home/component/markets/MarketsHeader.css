@@ -1,0 +1,103 @@
+/* ========================================================
+   MarketsHeader — Page Title + Search Bar
+   ======================================================== */
+
+.markets-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.markets-header__left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.markets-header__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.markets-header__title-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.25);
+}
+
+.markets-header__subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.markets-header__right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.markets-header__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 8px 14px;
+  width: 240px;
+  transition: all 0.2s ease-out;
+}
+
+.markets-header__search:focus-within {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.markets-header__search svg {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.markets-header__search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 13px;
+  width: 100%;
+}
+
+.markets-header__search-input::placeholder {
+  color: var(--text-disabled);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .markets-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .markets-header__search {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .markets-header__title {
+    font-size: 20px;
+  }
+}

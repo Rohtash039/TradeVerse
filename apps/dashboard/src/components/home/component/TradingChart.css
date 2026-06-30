@@ -1,0 +1,120 @@
+.chart-main{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+.chart-panel-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-subtle);
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.chart-panel-pair-info{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.chart-panel-pair-info{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.chart-panel-pair{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.chart-panel-pair-icon{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(247, 147, 26, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #f7931a;
+}
+
+.chart-panel-pair-name{
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.chart-panel-pair-type{
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--surface-overlay);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+.chart-panel-live-price{
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.chart-panel-stats{
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.chart-panel-stat{
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.chart-panel-stat-label{
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chart-panel-stat-value{
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.chart-panel-canvas{
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.tradingview-widget-container{
+  height: 100%;
+  width: 100%;
+}
+
+.tradingview-widget-container iframe{
+  height: 100% !important;
+  width: 100% !important;
+}
+
+
+
+

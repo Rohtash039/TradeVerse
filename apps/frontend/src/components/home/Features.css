@@ -1,0 +1,48 @@
+.border-f{
+  padding: 120px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.elite {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.heading-elite { 
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.pa {
+  font-size: 18px;
+  margin-top: 16px;
+  color: var(--text-muted);
+}
+
+.elite-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.elite-group{
+    background: rgba(0, 240, 255, 0.1);
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.elite-group-heading{
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.elite-group-para{
+    line-height: 1.6;
+    color: var(--text-muted); 
+}

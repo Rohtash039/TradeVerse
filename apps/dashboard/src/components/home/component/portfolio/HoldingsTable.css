@@ -1,0 +1,161 @@
+/* ========================================================
+   Holdings Table — Detailed Asset List
+   ======================================================== */
+
+.holdings {
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.holdings__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.holdings__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.holdings__count {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--surface-overlay);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-weight: 500;
+}
+
+/* ── Table ── */
+.holdings__table-wrap {
+  overflow-x: auto;
+}
+
+.holdings__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.holdings__th {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.holdings__th--right {
+  text-align: right;
+}
+
+.holdings__row {
+  transition: background 0.2s ease-out;
+}
+
+.holdings__row:hover {
+  background: var(--glass-card-hover);
+}
+
+.holdings__td {
+  padding: 12px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.holdings__td--right {
+  text-align: right;
+}
+
+.holdings__td--mono {
+  font-weight: 500;
+}
+
+/* ── Asset Cell ── */
+.holdings__asset {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.holdings-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.holdings-badge--btc {
+  background: rgba(247, 147, 26, 0.15);
+  color: #f7931a;
+}
+
+.holdings-badge--eth {
+  background: rgba(98, 126, 234, 0.15);
+  color: #627eea;
+}
+
+.holdings-badge--usdt {
+  background: rgba(38, 161, 123, 0.15);
+  color: #26a17b;
+}
+
+.holdings-badge--sol {
+  background: rgba(var(--accent-purple-rgb), 0.15);
+  color: var(--accent-purple);
+}
+
+.holdings-badge--ada {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--accent-blue);
+}
+
+.holdings__asset-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.holdings__asset-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+.holdings__asset-symbol {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .holdings__th:nth-child(3),
+  .holdings__td:nth-child(3),
+  .holdings__th:nth-child(4),
+  .holdings__td:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .holdings__th:nth-child(5),
+  .holdings__td:nth-child(5) {
+    display: none;
+  }
+}

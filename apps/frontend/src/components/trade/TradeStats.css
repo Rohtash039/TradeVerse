@@ -1,0 +1,21 @@
+
+.stats-main{
+    display: flex;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 60px 0;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+
+.stats-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-align: center;
+}

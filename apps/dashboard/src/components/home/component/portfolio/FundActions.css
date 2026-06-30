@@ -1,0 +1,113 @@
+
+.fund-actions{
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-right: 14px;
+}
+
+.fund-actions-title{
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ── Button Group ── */
+.fund-actions-buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Individual Button ── */
+.fund-btn{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-raised);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.fund-btn:hover{
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+/* ── Deposit (Primary) ── */
+.fund-btn-deposit{
+  background: linear-gradient(135deg,rgba(var(--primary-neon-rgb), 0.12),rgba(var(--primary-neon-rgb), 0.04));
+  border-color: rgba(var(--primary-neon-rgb), 0.2);
+}
+
+.fund-btn-deposit:hover{
+  border-color: rgba(var(--primary-neon-rgb), 0.4);
+  box-shadow: 0 4px 24px rgba(var(--primary-neon-rgb), 0.15);
+}
+
+.fund-btn-deposit .fund-btn-icon-wrap{
+  background: rgba(var(--primary-neon-rgb), 0.15);
+  color: var(--primary-neon);
+}
+
+/* ── Withdraw ── */
+.fund-btn-withdraw:hover{
+  border-color: var(--glass-border-hover);
+}
+
+.fund-btn-withdraw .fund-btn-icon-wrap{
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+/* ── Transfer ── */
+.fund-btn-transfer:hover{
+  border-color: var(--glass-border-hover);
+}
+
+.fund-btn-transfer .fund-btn-icon-wrap{
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent-blue);
+}
+
+/* ── Icon Wrap ── */
+.fund-btn-icon-wrap{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease-out;
+}
+
+.fund-btn:hover .fund-btn-icon-wrap{
+  transform: scale(1.05);
+}
+
+/* ── Text ── */
+.fund-btn-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.fund-btn-label{
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.fund-btn-desc{
+  font-size: 12px;
+  color: var(--text-muted);
+}

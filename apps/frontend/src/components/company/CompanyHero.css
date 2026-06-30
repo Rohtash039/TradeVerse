@@ -1,0 +1,86 @@
+
+.company-hero{
+    margin: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.company-hero-span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(0, 255, 170, 0.2);
+    background-color: rgba(0, 255, 170, 0.1);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.company-dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--secondary-purple);
+    box-shadow: 0 0 10px var(--secondary-glow);
+}
+
+.company-hero-head{
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 24px; 
+}
+
+.company-hero-para{
+    line-height: 1.6;
+    font-size: 20px;
+    max-width: 680px;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+.hero-milestone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 48px;
+    margin-bottom: 32px;
+}
+
+.milestones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.milestones span{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-neon);
+}
+
+.milestone-dot{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-neon);
+    background: var(--bg-dark);
+    box-shadow: 0 0 12px var(--primary-glow);
+}
+
+.milestones p{
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: center;
+    max-width: 120px;
+}

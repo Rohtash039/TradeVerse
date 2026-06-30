@@ -1,0 +1,59 @@
+/* ========================================================
+   MarketCategoryTabs — Filterable category pill tabs
+   ======================================================== */
+
+.market-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+}
+
+.market-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.market-tabs__tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.market-tabs__tab:hover {
+  color: var(--text-primary);
+  background: var(--glass-card-hover);
+  border-color: var(--glass-border-hover);
+}
+
+.market-tabs__tab--active {
+  color: var(--accent-blue);
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.25);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.1);
+}
+
+.market-tabs__count {
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1px 6px;
+  border-radius: 10px;
+  color: var(--text-muted);
+}
+
+.market-tabs__tab--active .market-tabs__count {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--accent-blue);
+}

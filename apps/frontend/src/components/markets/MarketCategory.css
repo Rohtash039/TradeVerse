@@ -1,0 +1,34 @@
+
+.category-main{
+    margin: 48px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.category-btn{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-btn button{
+    padding: 10px 24px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.category-btn button:hover{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.category-btn button.active {
+    color: var(--primary-neon);
+    background-color: rgba(0, 240, 255, 0.1);
+    border-color: rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.15);
+}

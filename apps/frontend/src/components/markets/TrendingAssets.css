@@ -1,0 +1,114 @@
+.trending-main{
+   margin: 48px;
+}
+
+.trending-heading{
+    font-size: 20px;
+    display: flex;
+    gap:8px;
+    margin-bottom: 30px;
+}
+
+.trending-data{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.trending-card{
+    position: relative;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trending-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.trending-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trending-coin-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.trending-symbol {
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.trending-change{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    gap: 4px;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 10px;
+}
+
+.badge-up {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.badge-down {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.trending-name {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.trending-price {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Skeleton loading */
+.trending-skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+
+.skeleton-line {
+  display: block;
+  height: 14px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+.skeleton-short { width: 60px; }
+.skeleton-medium { width: 100px; }
+.skeleton-large { width: 140px; }
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

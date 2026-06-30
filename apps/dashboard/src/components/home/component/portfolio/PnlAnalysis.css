@@ -1,0 +1,121 @@
+/* ========================================================
+   PNL Analysis — Performance Area Chart
+   ======================================================== */
+
+.pnl-analysis {
+  background: var(--glass-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Header ── */
+.pnl-analysis__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pnl-analysis__header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pnl-analysis__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.pnl-analysis__change {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.pnl-analysis__change--up {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.pnl-analysis__change--down {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+/* ── Time Range Tabs ── */
+.pnl-analysis__tabs {
+  display: flex;
+  gap: 2px;
+  background: var(--surface-overlay);
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.pnl-analysis__tab {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: 8px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.pnl-analysis__tab:hover {
+  color: var(--text-primary);
+}
+
+.pnl-analysis__tab--active {
+  background: rgba(var(--primary-neon-rgb), 0.1);
+  color: var(--primary-neon);
+}
+
+/* ── Chart ── */
+.pnl-analysis__chart {
+  width: 100%;
+  /* min-height: 280px; */
+  height: 280px;
+}
+
+/* ── Tooltip ── */
+.pnl-tooltip {
+  background: var(--surface-overlay);
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: var(--shadow-elevated);
+}
+
+.pnl-tooltip__date {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.pnl-tooltip__value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .pnl-analysis__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pnl-analysis__chart {
+    min-height: 200px;
+  }
+}

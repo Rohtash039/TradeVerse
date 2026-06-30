@@ -1,0 +1,104 @@
+.company-mission{
+    background: rgba(255, 255, 255, 0.015);
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 100px;
+}
+
+.mission-text{
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 80px;
+}
+
+.mission-text h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.mission-text p{
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 720px;
+    color: var(--text-muted);
+}
+
+.mission-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 120px;
+    padding-bottom: 60px;
+}
+
+.mission-card{
+    margin: 20px;
+    padding: 56px 48px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+    background: var(--bg-card);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 240, 255, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.mission-card-icon{
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.mission-icon{
+    border: 1px solid rgba(0, 240, 255, 0.12);
+    background: rgba(0, 240, 255, 0.08);
+}
+
+.eye{
+    border: 1px solid rgba(139, 92, 246, 0.12);
+    background: rgba(139, 92, 246, 0.08);
+}
+
+.mission-card h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.mission-card p{
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text-muted);
+}
+
+.mission-quote p{
+    position: relative;
+    margin-top: 28px;
+    padding-top: 28px;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.7;
+    border-top: 1px solid var(--border-subtle);
+    padding-left: 24px;
+}
+
+.mission-quote p::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: 24px;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--primary-neon);
+}
+
+

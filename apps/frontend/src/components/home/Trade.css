@@ -1,0 +1,119 @@
+.sec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    gap: 64px;
+    padding-top: 40px;
+}
+
+.trade{
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.op{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 100px;
+    width: fit-content;
+    border: 1px solid var(--border-subtle);
+}
+
+.dot{
+    background-color: var(--success);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--success);
+}
+
+.system{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.heading{
+    font-size: 50px;
+    line-height: 1.1; 
+    font-weight: 800; 
+}
+
+.para{
+    font-size: 20px;
+    color: var(--text-muted);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.btns{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.prime{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 18px;
+    padding: 16px 36px;
+}
+
+.secd{
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    padding: 16px 24px;
+    border: none;
+}
+
+.quality{
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    gap: 48px;
+    margin-top: 24px;
+    padding-top: 32px;
+}
+
+.custom-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+.custom-para {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.graphic{
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.graphic-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,240,255,0.15) 0%, transparent 60%);
+    z-index: -1;
+}
+
+.graphic-img{
+    width: 100%;
+    max-width: 650px;
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+}

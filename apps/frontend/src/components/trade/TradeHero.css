@@ -1,0 +1,52 @@
+
+.trade-hero{
+    text-align: center;
+    margin: 8%;
+}
+
+.trade-span{
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid rgba(0, 255, 170, 0.2);
+    background-color: rgba(0, 255, 170, 0.1);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.trade-hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.trade-heading{
+    font-size: 60px;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.trade-para{
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    color: var(--text-muted);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trade-btns{
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+.trade-prime, .trade-secd{
+    padding: 12px 18px;
+}
+
+
