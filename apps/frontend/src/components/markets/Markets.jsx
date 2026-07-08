@@ -5,7 +5,8 @@ import MarketTable from "./MarketTable";
 import TrendingAssets from "./TrendingAssets";
 import "./Market.css";
 
-const API_BASE = "http://localhost:5000/api/market";
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
+const API_BASE = `${BASE_URL}/market`;
 
 export default function Markets() {
   const [assets, setAssets] = useState([]);

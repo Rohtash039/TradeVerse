@@ -67,3 +67,27 @@
     align-items: center;
     justify-content: center;
 }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .company-start {
+    margin: 0 60px;
+    margin-bottom: 80px;
+    padding: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-start {
+    margin: 0 16px;
+    margin-bottom: 60px;
+    padding: 32px 20px;
+  }
+  .company-start-content h2 {
+    font-size: clamp(28px, 5vw, 40px);
+  }
+  .company-start-row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

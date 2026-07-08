@@ -32,3 +32,16 @@
     border-color: rgba(0, 240, 255, 0.3);
     box-shadow: 0 0 12px rgba(0, 240, 255, 0.15);
 }
+
+@media (max-width: 768px) {
+  .category-main {
+    margin: 16px;
+  }
+  .category-btn {
+    gap: 10px;
+  }
+  .category-btn button {
+    padding: 8px 16px;
+    margin-bottom: 12px;
+  }
+}

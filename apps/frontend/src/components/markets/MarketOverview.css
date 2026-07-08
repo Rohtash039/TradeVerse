@@ -157,16 +157,69 @@
 }
 
 @media (max-width: 768px) {
-  .market-hero-container {
-    padding: 40px 0 32px 0;
+  .market-overview-main {
+    padding: 32px 0 24px 0;
+    margin: 16px;
   }
 
-  .market-hero-title {
-    font-size: 36px;
+  .market-overview-title {
+    font-size: 32px;
   }
 
-  .market-hero-text,
-  .market-hero-stats {
+  .market-overview-content {
+    gap: 32px;
+  }
+
+  .market-overview-text,
+  .market-overview-stats {
     min-width: 100%;
+  }
+}
+
+/* Responsive safety overrides */
+.market-overview-main,
+.table-main {
+  margin-inline: clamp(14px, 4vw, 48px);
+}
+
+.market-overview-content {
+  gap: clamp(28px, 7vw, 120px);
+}
+
+.market-overview-text,
+.market-overview-stats {
+  min-width: min(100%, 320px);
+}
+
+.market-search-box {
+  width: 100%;
+}
+
+.market-table {
+  min-width: 720px;
+}
+
+.asset-info,
+.asset-symbol,
+.asset-name {
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  .market-stat-card {
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .stat-details {
+    gap: 8px;
+  }
+
+  .stat-label {
+    width: 100%;
+  }
+
+  .market-overview-title {
+    font-size: clamp(28px, 9vw, 32px);
   }
 }

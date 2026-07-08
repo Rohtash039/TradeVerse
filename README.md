@@ -40,7 +40,7 @@
 ---
 
 ##  Demo
--  **Live Demo:** `https://tradeverse-demo.example.com` *(Placeholder)*
+-  **Live Demo:** `https://tradeverse-smoky.vercel.app/` *(Placeholder)*
 -  **Video Walkthrough:** `https://youtube.com/example-tradeverse` *(Placeholder)*
 
 ---

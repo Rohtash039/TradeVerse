@@ -4,7 +4,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../../../firebase";
 import { clearSession } from "../../../utils/api";
 
-export default function Sidebar({activeId, onNavigate}){
+export default function Sidebar({activeId, onNavigate, isOpen = false}){
     const getFrontendHomeUrl = () => {
         const configuredUrl = import.meta.env.VITE_FRONTEND_URL;
 
@@ -41,7 +41,7 @@ export default function Sidebar({activeId, onNavigate}){
     ];
 
     return(
-        <aside className="sidebar">
+        <aside className={`sidebar ${isOpen ? "sidebar-open" : ""}`}>
             <div className="sidebar-logo" onClick={() => onNavigate('trade')}>
                 <Layers size={20} />   
             </div>
@@ -85,4 +85,5 @@ export default function Sidebar({activeId, onNavigate}){
         </aside>
     );
 }
+
 

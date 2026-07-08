@@ -1,1 +1,28 @@
 @import "./Login.css";
+@media (max-width: 480px) {
+  .auth-form-side {
+    padding: 16px;
+  }
+
+  .login-form,
+  .signup-form {
+    padding: 24px 18px;
+    border-radius: 14px;
+  }
+
+  .login-form h1,
+  .signup-form h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-height: 680px) and (max-width: 900px) {
+  .frontend-auth-container,
+  .auth-split-container {
+    min-height: auto;
+  }
+
+  .auth-form-side {
+    align-items: flex-start;
+  }
+}

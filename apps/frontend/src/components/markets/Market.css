@@ -2,3 +2,9 @@
   padding-top: 40px;
   padding-bottom: 80px;
 }
+
+@media (max-width: 768px) {
+  .markets-page {
+    padding-bottom: 40px;
+  }
+}

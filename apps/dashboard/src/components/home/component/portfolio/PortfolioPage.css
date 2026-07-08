@@ -34,3 +34,29 @@
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
+
+@media (max-width: 768px) {
+  .portfolio-page {
+    margin-left: 0;
+    margin-top: 56px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 80px; /* Space for bottom nav bar */
+  }
+  .portfolio-page-row-two {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1024px) {
+  .portfolio-page {
+    margin-left: 0;
+    margin-top: 56px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-page {
+    padding: 12px 10px 20px;
+  }
+}

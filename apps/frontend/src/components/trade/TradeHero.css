@@ -49,4 +49,24 @@
     padding: 12px 18px;
 }
 
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .trade-hero {
+    margin: 4% 16px;
+  }
+  .trade-heading {
+    font-size: clamp(28px, 6vw, 48px);
+  }
+  .trade-para {
+    font-size: 16px;
+  }
+  .trade-btns {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 12px;
+  }
+}
+
 

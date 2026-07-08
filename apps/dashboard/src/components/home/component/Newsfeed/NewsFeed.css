@@ -173,3 +173,15 @@
   background: rgba(var(--accent-blue), 0.15);
   color: var(--accent-blue);
 }
+
+@media (max-width: 768px) {
+  .newsfeed__header {
+    padding: 12px 16px;
+  }
+  .newsfeed__item {
+    padding: 12px 16px;
+  }
+  .newsfeed__item-content {
+    gap: 12px;
+  }
+}

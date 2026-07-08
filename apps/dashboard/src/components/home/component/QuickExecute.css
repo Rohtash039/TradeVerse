@@ -282,5 +282,18 @@
   transform: translateY(-1px);
 }
 
-
-
+@media (max-width: 768px) {
+  .execute-tabs {
+    margin: 12px 16px 0;
+  }
+  .execute-form {
+    padding: 16px;
+    gap: 16px;
+  }
+  .execute-input-wrap {
+    min-height: 48px;
+  }
+  .execute-submit {
+    min-height: 48px;
+  }
+}

@@ -159,3 +159,23 @@
     display: none;
   }
 }
+
+.market-table,
+.holdings__table,
+.positions-table {
+  min-width: 720px;
+}
+
+.market-table-wrapper,
+.holdings,
+.positions-main {
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .market-table,
+  .holdings__table,
+  .positions-table {
+    min-width: 640px;
+  }
+}

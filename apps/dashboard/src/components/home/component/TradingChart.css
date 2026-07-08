@@ -115,6 +115,22 @@
   width: 100% !important;
 }
 
+@media (max-width: 768px) {
+  .chart-panel-header {
+    padding: 12px 16px;
+  }
+  .chart-panel-live-price {
+    font-size: 18px;
+  }
+  .chart-panel-stats {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .chart-panel-stat-value {
+    font-size: 11px;
+  }
+}
+
 
 
 

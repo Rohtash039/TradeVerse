@@ -20,6 +20,7 @@ import { getCurrentUser, getPortfolio, getWatchlist, syncUser } from "../../util
 
 export default function Home() {
   const [activePage, setActivePage] = useState("trade");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selectedCoin, setSelectedCoin] = useState("BINANCE:BTCUSDT");
   const [selectedCoinId, setSelectedCoinId] = useState("bitcoin");
 
@@ -37,6 +38,28 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!sidebarOpen) return;
+
+    const scrollY = window.scrollY;
+    document.body.classList.add("drawer-scroll-lock");
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+
+    return () => {
+      document.body.classList.remove("drawer-scroll-lock");
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollY);
+    };
+  }, [sidebarOpen]);
 
   const fetchAllUserData = async () => {
     try {
@@ -103,10 +126,21 @@ export default function Home() {
     await fetchAllUserData();
   };
 
+  const handleNavigate = (pageId) => {
+    setActivePage(pageId);
+    setSidebarOpen(false);
+  };
+
   return (
-    <div className="home">
-      <Sidebar activeId={activePage} onNavigate={setActivePage} />
-      <Topbar balanceValue={balance} />
+    <div className={`home ${sidebarOpen ? "home-sidebar-open" : ""}`}>
+      <Sidebar activeId={activePage} onNavigate={handleNavigate} isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <button
+        type="button"
+        className="home-sidebar-backdrop"
+        aria-label="Close navigation"
+        onClick={() => setSidebarOpen(false)}
+      />
+      <Topbar balanceValue={balance} onMenuClick={() => setSidebarOpen(true)} />
 
       {activePage === "trade" && (
         <>
@@ -177,6 +211,11 @@ export default function Home() {
     </div>
   );
 }
+
+
+
+
+
 
 
 

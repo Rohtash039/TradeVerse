@@ -75,4 +75,26 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .show-case {
+    flex-direction: column;
+    padding: 0 16px;
+    margin: 32px 16px;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+  }
+  .show-case h3 {
+    font-size: clamp(28px, 5vw, 36px);
+  }
+  .show-case p {
+    font-size: 16px;
+  }
+  .show-case-img img {
+    margin-left: 0;
+    margin-top: 32px;
+    height: auto;
+  }
+}
+
 

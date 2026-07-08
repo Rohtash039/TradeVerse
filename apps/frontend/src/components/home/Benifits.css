@@ -44,6 +44,24 @@
     margin-left: 100px;
 }
 
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .cont-ben {
+    flex-direction: column;
+    gap: 32px;
+    margin-top: -24px;
+  }
+  .heading-ben {
+    font-size: clamp(24px, 5vw, 32px);
+  }
+  .para-ben {
+    font-size: 16px;
+  }
+  .main-secd-ben {
+    margin-left: 0;
+  }
+}
+
 
 
 

@@ -198,3 +198,65 @@
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+
+@media (max-width: 768px) {
+  .table-main {
+    margin: 16px;
+    border-radius: 12px;
+  }
+  .market-table th,
+  .market-table td {
+    padding: 12px 16px;
+  }
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/* Responsive safety overrides */
+.market-overview-main,
+.table-main {
+  margin-inline: clamp(14px, 4vw, 48px);
+}
+
+.market-overview-content {
+  gap: clamp(28px, 7vw, 120px);
+}
+
+.market-overview-text,
+.market-overview-stats {
+  min-width: min(100%, 320px);
+}
+
+.market-search-box {
+  width: 100%;
+}
+
+.market-table {
+  min-width: 720px;
+}
+
+.asset-info,
+.asset-symbol,
+.asset-name {
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  .market-stat-card {
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .stat-details {
+    gap: 8px;
+  }
+
+  .stat-label {
+    width: 100%;
+  }
+
+  .market-overview-title {
+    font-size: clamp(28px, 9vw, 32px);
+  }
+}

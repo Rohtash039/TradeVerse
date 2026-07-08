@@ -98,3 +98,25 @@
     text-decoration: none;
 }
 
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 48px 0 32px 0;
+  }
+  .main-footer-div {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+  .news-input-div {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-footer-div {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+

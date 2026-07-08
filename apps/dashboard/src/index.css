@@ -139,3 +139,71 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+@media (max-width: 1024px) {
+  body {
+    overflow-y: auto !important;
+  }
+}
+
+html,
+#root {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 0;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+button,
+[role="button"],
+input,
+select,
+textarea {
+  min-width: 0;
+}
+
+button,
+[role="button"] {
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+@media (min-width: 769px) {
+  input,
+  select,
+  textarea {
+    font-size: inherit;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden !important;
+  }
+}
+
+body.drawer-scroll-lock {
+  overflow: hidden !important;
+  touch-action: none;
+}

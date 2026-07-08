@@ -1,13 +1,16 @@
 import { useState } from "react";
 import "./Topbar.css"
-import {Bell, Eye, EyeOff, Search, Wallet} from "lucide-react"
-export default function Topbar({ balanceValue = 10000 }) {
+import {Bell, Eye, EyeOff, Menu, Wallet} from "lucide-react"
+export default function Topbar({ balanceValue = 10000, onMenuClick }) {
     const [showBalance, setShowBalance] = useState(true);
     const formatted = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(balanceValue);
 
     return(
         <header className="topbar">
             <div className="topbar-left">
+                <button type="button" className="topbar-menu-btn" aria-label="Open navigation" onClick={onMenuClick}>
+                    <Menu size={18} />
+                </button>
                 <div className="topbar-brand">
                     Trade <span className="topbar-brand-accent">Verse</span>
                     <span className="topbar-pro">PRO</span>

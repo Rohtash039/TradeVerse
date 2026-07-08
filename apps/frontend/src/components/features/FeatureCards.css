@@ -87,3 +87,18 @@
     line-height: 1.6;
     color: var(--text-muted);
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .feature-card-head {
+    font-size: clamp(24px, 5vw, 36px);
+  }
+  .feature-card-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .feature-card-item {
+    padding: 24px;
+  }
+}

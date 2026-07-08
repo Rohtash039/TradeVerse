@@ -130,3 +130,19 @@
   height: 28px;
   background: var(--border-subtle);
 }
+
+@media (max-width: 480px) {
+  .sentiment-gauge__svg {
+    width: 140px;
+    height: 84px;
+  }
+  .sentiment-gauge__score {
+    font-size: 24px;
+  }
+  .sentiment-gauge__stats {
+    gap: 8px;
+  }
+  .sentiment-gauge__stat-value {
+    font-size: 12px;
+  }
+}

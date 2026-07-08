@@ -201,25 +201,101 @@
 @media (max-width: 768px) {
   .topbar {
     left: 0;
-    padding: 0 var(--gap-lg);
+    padding: 0 16px;
   }
 
-  .topbar__search {
+  .topbar-search {
     min-width: unset;
     flex: 1;
   }
 
-  .topbar__search-text,
-  .topbar__search-kbd,
-  .topbar__separator,
-  .topbar__wallet,
-  .topbar__status {
+  .topbar-search-text,
+  .topbar-search-kbd,
+  .topbar-separator,
+  .topbar-wallet,
+  .topbar-status {
     display: none;
   }
 
-  .topbar__brand {
+  .topbar-brand {
     font-size: 14px;
   }
 }
 
 
+
+.topbar {
+  z-index: 70;
+  min-width: 0;
+}
+
+.topbar-menu-btn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.topbar-menu-btn:hover,
+.topbar-menu-btn:focus-visible {
+  color: var(--text-primary);
+  background: var(--glass-card-hover);
+}
+
+.topbar-right,
+.topbar-left {
+  min-width: 0;
+}
+
+.topbar-wallet {
+  min-height: 44px;
+}
+
+@media (max-width: 1024px) {
+  .topbar {
+    left: 0;
+    padding: 0 16px;
+  }
+
+  .topbar-menu-btn {
+    display: flex;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .topbar {
+    padding: 0 10px;
+  }
+
+  .topbar-left,
+  .topbar-right {
+    gap: 8px;
+  }
+
+  .topbar-wallet {
+    padding: 6px 10px;
+  }
+
+  .topbar-wallet-value {
+    max-width: 104px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 380px) {
+  .topbar-pro,
+  .topbar-wallet-icon {
+    display: none;
+  }
+
+  .topbar-brand {
+    font-size: 13px;
+  }
+}

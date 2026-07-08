@@ -1,52 +1,249 @@
-.item {
+.glass-nav .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  min-width: 0;
 }
 
-.icon {
+.glass-nav .icon {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+  flex-shrink: 0;
 }
 
-h2 {
+.glass-nav h2 {
   margin-top: 8px;
-  font-size: 24px;
+  font-size: clamp(20px, 2vw, 24px);
   font-weight: 800;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
   color: white;
+  white-space: nowrap;
 }
 
-.tabs {
+.glass-nav .tabs {
   display: flex;
-  gap: 32px;
+  gap: clamp(18px, 2.5vw, 32px);
   align-items: center;
   font-weight: 500;
+  min-width: 0;
 }
 
-span {
+.glass-nav span {
   cursor: pointer;
   color: #94a3b8;
   transition: color 0.2s;
 }
 
-span:hover {
+.glass-nav span:hover {
   color: white;
 }
 
-.btns{
-  display: flex; 
-  gap: 16px; 
+.glass-nav .btns {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.dec{
+.glass-nav .btns button,
+.glass-nav .hamburger {
+  min-height: 44px;
+}
+
+.dec {
   text-decoration: none;
 }
 
-.tabs a.active span {
+.glass-nav .tabs a.active span {
   color: white;
   font-weight: 600;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px 10px;
+  background: none;
+  border: none;
+}
+
+.glass-nav .hamburger span {
+  width: 24px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 920px) {
+  .glass-nav .tabs {
+    gap: 18px;
+  }
+
+  .glass-nav .btns {
+    gap: 10px;
+  }
+
+  .glass-nav .btns button {
+    padding-inline: 18px;
+  }
+}
+
+@media (max-width: 920px) {
+  .glass-nav .item {
+    height: 64px;
+    position: relative;
+  }
+
+  .glass-nav .tabs,
+  .glass-nav .btns {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #070913f0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 100;
+  }
+
+  .glass-nav .tabs {
+    top: 64px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 24px;
+    gap: 8px;
+  }
+
+  .glass-nav .tabs.open {
+    display: flex;
+  }
+
+  .glass-nav .tabs a {
+    padding: 12px 0;
+    min-height: 44px;
+  }
+
+  .glass-nav .btns.open {
+    display: flex;
+    top: 256px;
+    flex-direction: column;
+    padding: 8px 24px 16px;
+    gap: 12px;
+  }
+
+  .glass-nav .btns button {
+    width: 100%;
+  }
+
+  .glass-nav .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 360px) {
+  .glass-nav h2 {
+    font-size: 18px;
+  }
+}
+
+
+body.nav-scroll-lock {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+@media (max-width: 920px) {
+  .glass-nav .tabs,
+  .glass-nav .btns {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+
+  .glass-nav .tabs.open {
+    top: 64px;
+    bottom: 128px;
+    max-height: calc(100dvh - 192px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .glass-nav .btns.open {
+    top: auto;
+    bottom: 0;
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-height: 430px) and (max-width: 920px) {
+  .glass-nav .tabs.open {
+    bottom: 104px;
+    max-height: calc(100dvh - 168px);
+    padding-block: 10px;
+  }
+
+  .glass-nav .tabs a {
+    padding-block: 8px;
+  }
+
+  .glass-nav .btns.open {
+    padding-block: 8px max(10px, env(safe-area-inset-bottom));
+    gap: 8px;
+  }
+}
+
+/* Keep the mobile drawer visually like the original top dropdown; only the list scrolls. */
+@media (max-width: 920px) {
+  .glass-nav .tabs,
+  .glass-nav .btns {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .glass-nav .tabs.open {
+    top: 64px;
+    bottom: auto;
+    max-height: min(220px, calc(100dvh - 154px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .glass-nav .btns.open {
+    top: 190px;
+    bottom: auto;
+    padding: 8px 24px 16px;
+  }
+}
+
+@media (max-height: 430px) and (max-width: 920px) {
+  .glass-nav .tabs.open {
+    max-height: calc(100dvh - 154px);
+  }
+
+  .glass-nav .btns.open {
+    top: 190px;
+    padding: 8px 24px 16px;
+  }
+}
+
+/* Keep all frontend drawer nav links, including Company, reachable in the scroll area. */
+@media (max-width: 920px) {
+  .glass-nav .tabs.open {
+    max-height: min(280px, calc(100dvh - 154px));
+  }
+
+  .glass-nav .btns.open {
+    top: min(300px, calc(100dvh - 90px));
+  }
+}

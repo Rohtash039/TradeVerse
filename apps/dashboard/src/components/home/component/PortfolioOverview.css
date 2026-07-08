@@ -116,6 +116,16 @@
   font-weight: 600;
 }
 
+@media (max-width: 480px) {
+  .portfolio-value-usd {
+    font-size: 22px;
+  }
+  .portfolio-stats {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
 
 
 

@@ -87,5 +87,32 @@
     text-align: center;
 }
 
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .step-head {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 24px;
+  }
+  .step-content {
+    flex-direction: column;
+    margin: 0 16px;
+    padding-top: 0;
+  }
+  .step-content::before {
+    display: none; /* Hide horizontal connector line */
+  }
+  .step-text {
+    padding: 0 16px;
+    padding-bottom: 32px;
+  }
+  .step-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+}
+
 
 

@@ -46,3 +46,32 @@
     line-height: 1.6;
     color: var(--text-muted); 
 }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .border-f {
+    padding: 60px 40px;
+  }
+  .heading-elite {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .border-f {
+    padding: 40px 20px;
+  }
+  .heading-elite {
+    font-size: clamp(24px, 5vw, 36px);
+  }
+  .elite {
+    margin-bottom: 40px;
+  }
+  .elite-div {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .elite-group-heading {
+    font-size: 20px;
+  }
+}

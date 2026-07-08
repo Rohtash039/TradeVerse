@@ -132,3 +132,33 @@
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .team-card {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 40px;
+  }
+  .company-team-content h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    padding: 0 16px;
+    gap: 16px;
+  }
+  .company-team {
+    margin-bottom: 60px;
+  }
+  .company-team-content h2 {
+    font-size: clamp(24px, 5vw, 32px);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card {
+    grid-template-columns: 1fr;
+  }
+}
+

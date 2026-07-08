@@ -146,3 +146,34 @@
     grid-template-columns: 1fr;
   }
 }
+.profile-name,
+.profile-email,
+.profile-status {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1024px) {
+  .profile-page {
+    margin-left: 0;
+    margin-top: 56px;
+    height: auto;
+    min-height: calc(100vh - 56px);
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-page {
+    padding: 12px 10px 20px;
+  }
+
+  .profile-page-header,
+  .profile-card-main {
+    flex-direction: column;
+  }
+
+  .profile-status {
+    white-space: normal;
+  }
+}

@@ -77,3 +77,36 @@
     text-transform: uppercase;
 }
 
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .stats-visual {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 40px;
+  }
+  .company-stats-content h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-visual {
+    padding: 0 16px;
+    gap: 16px;
+  }
+  .company-stats {
+    margin-bottom: 60px;
+  }
+  .company-stats-content h2 {
+    font-size: clamp(24px, 5vw, 32px);
+  }
+  .stats-visual-content h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-visual {
+    grid-template-columns: 1fr;
+  }
+}
+
